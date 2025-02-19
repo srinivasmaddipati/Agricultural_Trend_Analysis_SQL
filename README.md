@@ -15,6 +15,11 @@ Crop production year analysis is an important method for evaluating agricultural
 
 ### 1. Calculate crop yield (production per unit area) to assess which crops are the most efficient in production
 
-`select Crop, ROUND(SUM(production)/SUM(Area), 2) as Production_per_Unit_Area from Crop_prod_study
+`
+select 
+  Crop, 
+  ROUND(SUM(production)/SUM(Area), 2) as Production_per_Unit_Area 
+from Crop_prod_study
 group by Crop
-order by production_per_unit_area desc;`
+order by production_per_unit_area desc;
+`
